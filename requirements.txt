@@ -1,0 +1,8 @@
+
+
+datasets
+ollama
+pandas
+numpy
+tqdm
+requests
