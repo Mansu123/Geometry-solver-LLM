@@ -27,6 +27,9 @@ brew install ollama
 
 # Start Ollama service
 ollama serve
+
+
+run it in a terminal keep it open and open new terminal then run below code 
 ```
 
 ### 2. Pull a Model
@@ -323,3 +326,4 @@ Feel free to submit issues or pull requests!
 - Use `codellama` or `deepseek-coder` for best coding results
 - Check the JSON output for detailed error analysis
 - The script automatically uses Mac M1 GPU through Ollama's Metal backend
+
