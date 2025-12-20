@@ -29,8 +29,9 @@ brew install ollama
 ollama serve
 
 
-run it in a terminal keep it open and open new terminal then run below code 
+ 
 ```
+# run it in a terminal keep it open and open new terminal then run below code
 
 ### 2. Pull a Model
 
@@ -89,6 +90,9 @@ python main.py --model codellama
 
 # Limit number of problems
 python main.py --model codellama --max-problems 10
+
+#or try this
+python main.py --model codellama:latest --max-problems 5
 
 # Use custom Ollama server
 python main.py --ollama-url http://192.168.1.100:11434
@@ -326,4 +330,5 @@ Feel free to submit issues or pull requests!
 - Use `codellama` or `deepseek-coder` for best coding results
 - Check the JSON output for detailed error analysis
 - The script automatically uses Mac M1 GPU through Ollama's Metal backend
+
 
