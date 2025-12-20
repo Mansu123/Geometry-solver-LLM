@@ -1,0 +1,6 @@
+problem_id,title,code_generated,total_tests,tests_passed,tests_failed,accuracy
+852/H,Bob and stages,True,18,0,18,0.0
+1515/B,Phoenix and Puzzle,True,14,9,5,64.28571428571429
+1846/D,Rudolph and Christmas Tree,False,0,0,0,0.0
+54/E,Vacuum Сleaner,False,0,0,0,0.0
+65/C,Harry Potter and the Golden Snitch,False,0,0,0,0.0

@@ -1,0 +1,408 @@
+[
+  {
+    "problem_id": "852/H",
+    "title": "Bob and stages",
+    "tags": [
+      "dp",
+      "geometry"
+    ],
+    "code_generated": true,
+    "code": "import math\n\nn, k = map(int, input().split())\nx = []\ny = []\nfor _ in range(n):\n    xi, yi = map(int, input().split())\n    x.append(xi)\n    y.append(yi)\n\narea = 0.0\nfor i in range(k):\n    for j in range(i+1, k):\n        area += math.fabs((x[j] - x[i]) * (y[j] + y[i]))\n\nprint(\"{:.2f}\".format(area/2))",
+    "total_tests": 18,
+    "tests_passed": 0,
+    "tests_failed": 18,
+    "accuracy": 0.0,
+    "error": "",
+    "timestamp": "2025-12-20T11:56:04.804969",
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "example",
+        "passed": false,
+        "expected": "10.00",
+        "actual": "16.50",
+        "error": "",
+        "time_taken": 0.8071589469909668,
+        "timeout": false
+      },
+      {
+        "test_number": 2,
+        "test_type": "official",
+        "passed": false,
+        "expected": "10.00\r\n",
+        "actual": "16.50",
+        "error": "",
+        "time_taken": 0.04160475730895996,
+        "timeout": false
+      },
+      {
+        "test_number": 3,
+        "test_type": "official",
+        "passed": false,
+        "expected": "500000.00\r\n",
+        "actual": "2501.00",
+        "error": "",
+        "time_taken": 0.04391622543334961,
+        "timeout": false
+      },
+      {
+        "test_number": 4,
+        "test_type": "official",
+        "passed": false,
+        "expected": "2376000.00\r\n",
+        "actual": "45495530.00",
+        "error": "",
+        "time_taken": 0.027034997940063477,
+        "timeout": false
+      },
+      {
+        "test_number": 5,
+        "test_type": "official",
+        "passed": false,
+        "expected": "3800000.00\r\n",
+        "actual": "137077463.50",
+        "error": "",
+        "time_taken": 0.023248910903930664,
+        "timeout": false
+      },
+      {
+        "test_number": 6,
+        "test_type": "official",
+        "passed": false,
+        "expected": "10.00\r\n",
+        "actual": "35.00",
+        "error": "",
+        "time_taken": 0.019988298416137695,
+        "timeout": false
+      },
+      {
+        "test_number": 7,
+        "test_type": "official",
+        "passed": false,
+        "expected": "12.50\r\n",
+        "actual": "27.50",
+        "error": "",
+        "time_taken": 0.02595686912536621,
+        "timeout": false
+      },
+      {
+        "test_number": 8,
+        "test_type": "official",
+        "passed": false,
+        "expected": "9584342.00\r\n",
+        "actual": "25114553.00",
+        "error": "",
+        "time_taken": 0.02131199836730957,
+        "timeout": false
+      },
+      {
+        "test_number": 9,
+        "test_type": "official",
+        "passed": false,
+        "expected": "11203684.50\r\n",
+        "actual": "58951868.50",
+        "error": "",
+        "time_taken": 0.020001888275146484,
+        "timeout": false
+      },
+      {
+        "test_number": 10,
+        "test_type": "official",
+        "passed": false,
+        "expected": "12598481.00\r\n",
+        "actual": "81605769.50",
+        "error": "",
+        "time_taken": 0.027966976165771484,
+        "timeout": false
+      },
+      {
+        "test_number": 11,
+        "test_type": "official",
+        "passed": false,
+        "expected": "14420210.00\r\n",
+        "actual": "79215249.00",
+        "error": "",
+        "time_taken": 0.02031111717224121,
+        "timeout": false
+      },
+      {
+        "test_number": 12,
+        "test_type": "official",
+        "passed": false,
+        "expected": "16614185.00\r\n",
+        "actual": "96378772.50",
+        "error": "",
+        "time_taken": 0.024981975555419922,
+        "timeout": false
+      },
+      {
+        "test_number": 13,
+        "test_type": "official",
+        "passed": false,
+        "expected": "17296266.50\r\n",
+        "actual": "122920578.50",
+        "error": "",
+        "time_taken": 0.02025604248046875,
+        "timeout": false
+      },
+      {
+        "test_number": 14,
+        "test_type": "official",
+        "passed": false,
+        "expected": "17459264.50\r\n",
+        "actual": "177492307.00",
+        "error": "",
+        "time_taken": 0.0272367000579834,
+        "timeout": false
+      },
+      {
+        "test_number": 15,
+        "test_type": "official",
+        "passed": false,
+        "expected": "2021721015.50\r\n",
+        "actual": "13670379947.00",
+        "error": "",
+        "time_taken": 0.020381927490234375,
+        "timeout": false
+      },
+      {
+        "test_number": 16,
+        "test_type": "official",
+        "passed": false,
+        "expected": "2151808288.50\r\n",
+        "actual": "23581010131.50",
+        "error": "",
+        "time_taken": 0.021557092666625977,
+        "timeout": false
+      },
+      {
+        "test_number": 17,
+        "test_type": "official",
+        "passed": false,
+        "expected": "2186073355.50\r\n",
+        "actual": "36248244335.00",
+        "error": "",
+        "time_taken": 0.019969940185546875,
+        "timeout": false
+      },
+      {
+        "test_number": 18,
+        "test_type": "official",
+        "passed": false,
+        "expected": "0.00\r\n",
+        "actual": "40.50",
+        "error": "",
+        "time_taken": 0.025358915328979492,
+        "timeout": false
+      }
+    ]
+  },
+  {
+    "problem_id": "1515/B",
+    "title": "Phoenix and Puzzle",
+    "tags": [
+      "brute force",
+      "geometry",
+      "math",
+      "number theory"
+    ],
+    "code_generated": true,
+    "code": "import sys\n\nfor _ in range(int(input())):\n    n = int(input())\n    if n == 2 or (n % 2) == 0:\n        print(\"YES\")\n    else:\n        print(\"NO\")",
+    "total_tests": 14,
+    "tests_passed": 9,
+    "tests_failed": 5,
+    "accuracy": 64.28571428571429,
+    "error": "",
+    "timestamp": "2025-12-20T11:57:30.351371",
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "example",
+        "passed": false,
+        "expected": "YES\nYES\nNO",
+        "actual": "YES\nYES\nYES",
+        "error": "",
+        "time_taken": 0.16948699951171875,
+        "timeout": false
+      },
+      {
+        "test_number": 2,
+        "test_type": "official",
+        "passed": false,
+        "expected": "YES\r\nYES\r\nNO\r\n",
+        "actual": "YES\nYES\nYES",
+        "error": "",
+        "time_taken": 0.04968714714050293,
+        "timeout": false
+      },
+      {
+        "test_number": 3,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.030328750610351562,
+        "timeout": false
+      },
+      {
+        "test_number": 4,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.02259206771850586,
+        "timeout": false
+      },
+      {
+        "test_number": 5,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.02345895767211914,
+        "timeout": false
+      },
+      {
+        "test_number": 6,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.02810382843017578,
+        "timeout": false
+      },
+      {
+        "test_number": 7,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.01916193962097168,
+        "timeout": false
+      },
+      {
+        "test_number": 8,
+        "test_type": "official",
+        "passed": true,
+        "expected": "NO\r\n",
+        "actual": "NO",
+        "error": "",
+        "time_taken": 0.021622896194458008,
+        "timeout": false
+      },
+      {
+        "test_number": 9,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.045578956604003906,
+        "timeout": false
+      },
+      {
+        "test_number": 10,
+        "test_type": "official",
+        "passed": true,
+        "expected": "YES\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.020205020904541016,
+        "timeout": false
+      },
+      {
+        "test_number": 11,
+        "test_type": "official",
+        "passed": true,
+        "expected": "NO\r\n",
+        "actual": "NO",
+        "error": "",
+        "time_taken": 0.021028995513916016,
+        "timeout": false
+      },
+      {
+        "test_number": 12,
+        "test_type": "official",
+        "passed": false,
+        "expected": "NO\r\nNO\r\nNO\r\n",
+        "actual": "YES\nYES\nYES",
+        "error": "",
+        "time_taken": 0.017472028732299805,
+        "timeout": false
+      },
+      {
+        "test_number": 13,
+        "test_type": "official",
+        "passed": false,
+        "expected": "NO\r\n",
+        "actual": "YES",
+        "error": "",
+        "time_taken": 0.018754959106445312,
+        "timeout": false
+      },
+      {
+        "test_number": 14,
+        "test_type": "official",
+        "passed": false,
+        "expected": "NO\r\nNO\r\nNO\r\n",
+        "actual": "NO\nYES\nYES",
+        "error": "",
+        "time_taken": 0.01756000518798828,
+        "timeout": false
+      }
+    ]
+  },
+  {
+    "problem_id": "1846/D",
+    "title": "Rudolph and Christmas Tree",
+    "tags": [
+      "constructive algorithms",
+      "geometry",
+      "math"
+    ],
+    "code_generated": false,
+    "code": "",
+    "total_tests": 0,
+    "tests_passed": 0,
+    "tests_failed": 0,
+    "accuracy": 0.0,
+    "error": "Failed to generate code",
+    "timestamp": "2025-12-20T11:59:15.820104"
+  },
+  {
+    "problem_id": "54/E",
+    "title": "Vacuum \u0421leaner",
+    "tags": [
+      "geometry"
+    ],
+    "code_generated": false,
+    "code": "",
+    "total_tests": 0,
+    "tests_passed": 0,
+    "tests_failed": 0,
+    "accuracy": 0.0,
+    "error": "Failed to generate code",
+    "timestamp": "2025-12-20T12:01:16.112656"
+  },
+  {
+    "problem_id": "65/C",
+    "title": "Harry Potter and the Golden Snitch",
+    "tags": [
+      "binary search",
+      "geometry"
+    ],
+    "code_generated": false,
+    "code": "",
+    "total_tests": 0,
+    "tests_passed": 0,
+    "tests_failed": 0,
+    "accuracy": 0.0,
+    "error": "Failed to generate code",
+    "timestamp": "2025-12-20T12:03:17.042441"
+  }
+]
